@@ -26,8 +26,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         exit()
     
     def btn_play_a(self):
-        #manager.widget.setCurrentWidget(manager.screen2)
-        pass
+        manager.widget.setCurrentWidget(manager.screen2)
+        manager.widget.resize(945, 847)
         
     def btn_view_a(self):
         self.webEngineView.setUrl("https://www.youtube.com/watch_popup?v=AHDgpuEzopc")

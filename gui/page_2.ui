@@ -46,6 +46,11 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>1</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -53,9 +58,9 @@
    <widget class="QPushButton" name="btn_roll">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>130</x>
       <y>620</y>
-      <width>141</width>
+      <width>191</width>
       <height>51</height>
      </rect>
     </property>
@@ -446,6 +451,11 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>1</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -458,6 +468,11 @@
       <width>121</width>
       <height>111</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>1</pointsize>
+     </font>
     </property>
     <property name="text">
      <string/>
@@ -472,6 +487,11 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>1</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -484,6 +504,11 @@
       <width>121</width>
       <height>111</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>1</pointsize>
+     </font>
     </property>
     <property name="text">
      <string/>
@@ -769,50 +794,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>btn_d5</sender>
+   <sender>btn_d1</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>btn_d6_a()</slot>
+   <slot>dice_click_a()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>191</x>
-     <y>543</y>
+     <x>222</x>
+     <y>34</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-252</x>
-     <y>542</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_d4</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_d5_a()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>213</x>
-     <y>430</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-157</x>
-     <y>433</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_d3</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_d4_a()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>207</x>
-     <y>309</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-134</x>
-     <y>335</y>
+     <x>1286</x>
+     <y>74</y>
     </hint>
    </hints>
   </connection>
@@ -820,31 +813,63 @@
    <sender>btn_d2</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>btn_d2_a()</slot>
+   <slot>dice_click_a()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>240</x>
-     <y>191</y>
+     <x>237</x>
+     <y>175</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-54</x>
-     <y>201</y>
+     <x>1256</x>
+     <y>164</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>btn_d1</sender>
+   <sender>btn_d3</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>btn_d1_a()</slot>
+   <slot>dice_click_a()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>246</x>
-     <y>84</y>
+     <x>248</x>
+     <y>286</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-109</x>
-     <y>88</y>
+     <x>1289</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_d4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dice_click_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1218</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_d5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dice_click_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>222</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1174</x>
+     <y>557</y>
     </hint>
    </hints>
   </connection>
@@ -853,12 +878,6 @@
   <slot>btn_exit_a()</slot>
   <slot>btn_roll_a()</slot>
   <slot>btn_done_a()</slot>
-  <slot>btn_d1_a()</slot>
-  <slot>btn_d2_a()</slot>
-  <slot>btn_d3_a()</slot>
-  <slot>btn_d4_a()</slot>
-  <slot>btn_d5_a()</slot>
-  <slot>btn_d6_a()</slot>
   <slot>btn_ones_a()</slot>
   <slot>btn_twos_a()</slot>
   <slot>btn_threes_a()</slot>
@@ -872,5 +891,6 @@
   <slot>btn_lgstr_a()</slot>
   <slot>btn_yhatzee_a()</slot>
   <slot>btn_chance_a()</slot>
+  <slot>dice_click_a()</slot>
  </slots>
 </ui>
