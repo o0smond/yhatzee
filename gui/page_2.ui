@@ -533,6 +533,199 @@
      <string>Player 1's Turn</string>
     </property>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>-5</y>
+      <width>111</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="lbl_ones">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_twos">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_threes">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_fours">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_fives">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_sixes">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>450</y>
+      <width>111</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="lbl_3same">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_4same">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_fullhouse">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_smstr">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_lgstr">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_yhatzee">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_chance">
+       <property name="font">
+        <font>
+         <family>C059</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <resources/>

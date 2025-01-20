@@ -216,6 +216,96 @@ class Ui_MainWindow(object):
         font4.setFamilies([u"C059"])
         font4.setPointSize(16)
         self.lbl_turn.setFont(font4)
+        self.verticalLayoutWidget_3 = QWidget(self.centralwidget)
+        self.verticalLayoutWidget_3.setObjectName(u"verticalLayoutWidget_3")
+        self.verticalLayoutWidget_3.setGeometry(QRect(830, -5, 111, 451))
+        self.verticalLayout_3 = QVBoxLayout(self.verticalLayoutWidget_3)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.lbl_ones = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_ones.setObjectName(u"lbl_ones")
+        self.lbl_ones.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_ones)
+
+        self.lbl_twos = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_twos.setObjectName(u"lbl_twos")
+        self.lbl_twos.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_twos)
+
+        self.lbl_threes = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_threes.setObjectName(u"lbl_threes")
+        self.lbl_threes.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_threes)
+
+        self.lbl_fours = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_fours.setObjectName(u"lbl_fours")
+        self.lbl_fours.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_fours)
+
+        self.lbl_fives = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_fives.setObjectName(u"lbl_fives")
+        self.lbl_fives.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_fives)
+
+        self.lbl_sixes = QLabel(self.verticalLayoutWidget_3)
+        self.lbl_sixes.setObjectName(u"lbl_sixes")
+        self.lbl_sixes.setFont(font4)
+
+        self.verticalLayout_3.addWidget(self.lbl_sixes)
+
+        self.verticalLayoutWidget_4 = QWidget(self.centralwidget)
+        self.verticalLayoutWidget_4.setObjectName(u"verticalLayoutWidget_4")
+        self.verticalLayoutWidget_4.setGeometry(QRect(830, 450, 111, 401))
+        self.verticalLayout_4 = QVBoxLayout(self.verticalLayoutWidget_4)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.lbl_3same = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_3same.setObjectName(u"lbl_3same")
+        self.lbl_3same.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_3same)
+
+        self.lbl_4same = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_4same.setObjectName(u"lbl_4same")
+        self.lbl_4same.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_4same)
+
+        self.lbl_fullhouse = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_fullhouse.setObjectName(u"lbl_fullhouse")
+        self.lbl_fullhouse.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_fullhouse)
+
+        self.lbl_smstr = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_smstr.setObjectName(u"lbl_smstr")
+        self.lbl_smstr.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_smstr)
+
+        self.lbl_lgstr = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_lgstr.setObjectName(u"lbl_lgstr")
+        self.lbl_lgstr.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_lgstr)
+
+        self.lbl_yhatzee = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_yhatzee.setObjectName(u"lbl_yhatzee")
+        self.lbl_yhatzee.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_yhatzee)
+
+        self.lbl_chance = QLabel(self.verticalLayoutWidget_4)
+        self.lbl_chance.setObjectName(u"lbl_chance")
+        self.lbl_chance.setFont(font4)
+
+        self.verticalLayout_4.addWidget(self.lbl_chance)
+
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -271,5 +361,18 @@ class Ui_MainWindow(object):
         self.btn_d4.setText("")
         self.btn_d3.setText("")
         self.lbl_turn.setText(QCoreApplication.translate("MainWindow", u"Player 1's Turn", None))
+        self.lbl_ones.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_twos.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_threes.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_fours.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_fives.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_sixes.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_3same.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_4same.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_fullhouse.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_smstr.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_lgstr.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_yhatzee.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.lbl_chance.setText(QCoreApplication.translate("MainWindow", u"1", None))
     # retranslateUi
 
