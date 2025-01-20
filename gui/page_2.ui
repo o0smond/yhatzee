@@ -302,6 +302,19 @@
       <number>0</number>
      </property>
      <item>
+      <widget class="QPushButton" name="btn_skip">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Skip Turn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="btn_ones">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -537,9 +550,9 @@
     <property name="geometry">
      <rect>
       <x>830</x>
-      <y>-5</y>
+      <y>30</y>
       <width>111</width>
-      <height>451</height>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -725,6 +738,25 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_back">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>810</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
    </widget>
   </widget>
  </widget>
@@ -1066,6 +1098,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_skip</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_skip_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>5</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1303</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_back</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_back_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>824</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>919</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btn_exit_a()</slot>
@@ -1085,5 +1149,7 @@
   <slot>btn_yhatzee_a()</slot>
   <slot>btn_chance_a()</slot>
   <slot>dice_click_a()</slot>
+  <slot>btn_skip_a()</slot>
+  <slot>btn_back_a()</slot>
  </slots>
 </ui>

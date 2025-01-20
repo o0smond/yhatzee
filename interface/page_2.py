@@ -23,7 +23,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         
         self.dice_btn = [self.btn_d1, self.btn_d2, self.btn_d3, self.btn_d4, self.btn_d5]
-        self.score_btn = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance]
+        self.score_btn = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance, self.btn_skip]
         self.score_lbl = [self.lbl_ones, self.lbl_twos, self.lbl_threes, self.lbl_fours, self.lbl_fives, self.lbl_sixes, self.lbl_3same, self.lbl_4same, self.lbl_fullhouse, self.lbl_smstr, self.lbl_lgstr, self.lbl_yhatzee, self.lbl_chance]
         self.playable_btns_p1 = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance]
         self.playable_btns_p2 = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance]
@@ -48,7 +48,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dice = [1,1,1,1,1]
         self.selected_dice = []
         self.playable_btns_p1 = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance]
+        self.p1_yhatzee_first_time = True
         self.playable_btns_p2 = [self.btn_ones, self.btn_twos, self.btn_threes, self.btn_fours, self.btn_fives, self.btn_sixes, self.btn_3same, self.btn_4same, self.btn_fullhouse, self.btn_smstr, self.btn_lgstr, self.btn_yhatzee, self.btn_chance]
+        self.p2_yhatzee_first_time = True
         self.re_rolled = 0
         self.update_btn()
         self.btn_roll.setText("Roll")
@@ -119,11 +121,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for i in range(len(self.dice_btn)):
             self.dice_btn[i].setDisabled(True)
             self.dice_btn[i].setStyleSheet(f"border-image: url(\"images/dice/{self.dice[i]}.png\") 0 0 0 0 stretch stretch;")
+            self.dice_btn[i].setText("")
         for i in range(len(self.score_btn)):
             self.score_btn[i].setDisabled(True)
         self.update_score_lbls()
         self.btn_done.setDisabled(True)
         self.btn_roll.setDisabled(True)
+        self.btn_yhatzee.setDisabled(False)
+        self.btn_skip.setDisabled(False)
     
     def switch_turn(self):
         if self.current_player == "p1":
@@ -146,24 +151,28 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     def check_win(self):
         checker = False
-        for i in range(len(self.score_p1)):
-            if self.score_p1[i] == 0:
+        checker2 = False
+        if self.current_player == "p1":
+            try:
+                test = self.score_p1[0]
+            except:
                 checker = True
-            elif self.score_p2[i] == 0:
-                checker = True
-        if checker == False:
-            p1_total = 0
-            p2_total = 0
-            for i in range(len(self.score_p1)):
-                p1_total += self.score_p1[i]
-                p2_total += self.score_p2[i]
-            if p1_total > p2_total:
-                self.message_box("Player 1 Wins","Winner")
-            elif p1_total < p2_total:
-                self.message_box("Player 2 Wins","Winner")
+        elif self.current_player == "p2":
+            try:
+                test = self.score_p2[0]
+            except:
+                checker2 = True
+        if checker or checker2:
+            score_final_p1 = sum(self.score_p1)
+            score_final_p2 = sum(self.score_p2)
+            if score_final_p1 > score_final_p2:
+                self.message_box("Player 1 wins","Success")
+            elif score_final_p2 > score_final_p1:
+                self.message_box("Player 2 wins","Success")
             else:
-                self.message_box("Draw","Winner")
-    
+                self.message_box("It's a draw","Success")
+            self.message_box('Play again? (If no, just exit after clicking "ok")', "Message")
+            self.reset()
     def num_score_btns(self, num):
         if self.current_player == "p1":
             for i in range(len(self.dice)):
@@ -177,11 +186,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.score_p2[num-1] += num
             self.message_box(f"You scored {self.score_p2[num-1]} points","Success")
             self.playable_btns_p2.remove(self.score_btn[num-1])
-        self.switch_turn()
-        self.check_win()
-        self.update_score_lbls()
-        for i in range(len(self.score_btn)):
-            self.score_btn[i].setDisabled(True)
+        self.end_of_turn()
         
     def update_score_lbls(self):
         if self.current_player == "p1":
@@ -189,7 +194,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         elif self.current_player == "p2":
             current = self.score_p2
         for i in range(len(current)):
-                print(f"Updating Labels{random.randint(0,99)}")
                 self.score_lbl[i].setText(str(current[i]))
         if self.current_player == "p1":
             for i in range(len(self.playable_btns_p1)):
@@ -220,8 +224,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     def same_kind_a(self, num):
         numbers = [0,0,0,0,0]
-        checkif_3 = [3]
-        checkif_4 = [4]
         str_3 = False
         str_4 = False
         for i in range(len(self.dice)):
@@ -229,9 +231,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if self.dice[i] == self.dice[j]:
                     numbers[i] += 1 
         numbers = sorted(set(numbers))
-        if all(num in numbers for num in checkif_3) == True:
+        if all(num in numbers for num in [3]) == True:
             str_3 = True
-        if all(num in numbers for num in checkif_4) == True:
+        if all(num in numbers for num in [4]) == True:
             str_4 = True
         
         if str_3 == True or str_4 == True:
@@ -253,11 +255,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.score_p2[7] += self.dice[0] + self.dice[1] + self.dice[2] + self.dice[3] + self.dice[4]
                     self.message_box(f"You scored {self.score_p2[7]} points","Success")
                     self.playable_btns_p2.remove(self.btn_4same)
-            self.switch_turn()
-            self.check_win()
-            self.update_score_lbls()        
-            for i in range(len(self.score_btn)):
-                self.score_btn[i].setDisabled(True)
+            self.end_of_turn()
+        else:
+            self.message_box(f"You don't have {num} of a kind","Error")
+        
         
     
     def btn_3same_a(self):
@@ -283,12 +284,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.score_p2[8] += 25
                 self.message_box(f"You scored {self.score_p2[8]} points","Success")
                 self.playable_btns_p2.remove(self.btn_fullhouse)
-            self.switch_turn()
-            self.check_win()
-            self.update_score_lbls()        
-            for i in range(len(self.score_btn)):
-                self.score_btn[i].setDisabled(True)
-            print("Full House")
+            self.end_of_turn()
+        else:
+            self.message_box(f"You don't have a full house","Error")
+        
                     
     def straights(self, sender):
         dice_copy = self.dice
@@ -325,12 +324,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.score_p2[10] += 40
                     self.message_box(f"You scored {self.score_p2[10]} points","Success")
                     self.playable_btns_p2.remove(self.btn_lgstr)
-            self.switch_turn()
-            self.check_win()
-            print("Straight")
-            self.update_score_lbls()
-            for i in range(len(self.score_btn)):
-                self.score_btn[i].setDisabled(True)
+            self.end_of_turn()
+        else:
+            if sender == self.btn_smstr:
+                self.message_box(f"You don't have a small straight","Error")
+            else:
+                self.message_box(f"You don't have a large straight","Error")
+        
         
     
     def btn_smstr_a(self):
@@ -339,26 +339,43 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.straights(self.sender())
     
     def btn_yhatzee_a(self):
+        numbers = [0,0,0,0,0]
         for i in range(len(self.dice)):
-            ticker = 0
             for j in range(len(self.dice)):
                 if self.dice[i] == self.dice[j]:
-                    ticker += 1
-                if ticker == 5:
-                    if self.current_player == "p1":
-                        self.score_p1[11] += 50
-                        self.message_box(f"You scored {self.score_p1[11]} points","Success")
-                        self.playable_btns_p1.remove(self.btn_yhatzee)
-                    elif self.current_player == "p2":
-                        self.score_p2[11] += 50
-                        self.message_box(f"You scored {self.score_p2[11]} points","Success")
-                        self.playable_btns_p2.remove(self.btn_yhatzee)
-        self.switch_turn()
-        self.check_win()
-        self.update_score_lbls()        
-        for i in range(len(self.score_btn)):
-            self.score_btn[i].setDisabled(True)
-                
+                    numbers[i] += 1
+        numbers = sorted(set(numbers))
+        if all(num in numbers for num in [5]) == True:
+            if self.current_player == "p1":
+                if self.p1_yhatzee_first_time == True:
+                    new = 50
+                    self.score_p1[11] += 50
+                    self.p1_yhatzee_first_time = False
+                else:
+                    new = 100
+                    self.score_p1[11] += 100
+                self.message_box(f"You scored {new} points","Success")
+                try:
+                    self.playable_btns_p1.remove(self.btn_yhatzee)
+                except:
+                    pass
+            elif self.current_player == "p2":
+                if self.p2_yhatzee_first_time == True:
+                    new = 50
+                    self.score_p2[11] += 50
+                    self.p2_yhatzee_first_time = False
+                else:
+                    new = 100
+                    self.score_p2[11] += 100
+                self.message_box(f"You scored {new} points","Success")
+                try:
+                    self.playable_btns_p2.remove(self.btn_yhatzee)
+                except:
+                    pass
+            self.end_of_turn()        
+        else:
+            self.message_box(f"You don't have a Yhatzee","Error")
+              
     
     def btn_chance_a(self):
         if self.current_player == "p1":
@@ -371,11 +388,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.score_p2[12] += self.dice[i]
             self.message_box(f"You scored {self.score_p2[12]} points","Success")
             self.playable_btns_p2.remove(self.btn_chance)
+        self.end_of_turn()
+    
+    def btn_skip_a(self):
+        self.message_box("Turn skipped, 0 points earned","Success")
+        self.end_of_turn()
+            
+    
+    def end_of_turn(self):
         self.switch_turn()
         self.check_win()
         self.update_score_lbls()
         for i in range(len(self.score_btn)):
             self.score_btn[i].setDisabled(True)
-    
-    
-    
+
+    def btn_back_a(self):
+        manager.widget.setCurrentWidget(manager.screen1)
+        manager.widget.resize(1077, 634)

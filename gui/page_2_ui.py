@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_2.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.0
+## Created by: Qt User Interface Compiler version 6.5.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.btn_3same = QPushButton(self.verticalLayoutWidget)
         self.btn_3same.setObjectName(u"btn_3same")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_3same.sizePolicy().hasHeightForWidth())
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
         self.verticalLayoutWidget_2.setGeometry(QRect(490, 0, 291, 441))
-        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.verticalLayoutWidget_2.sizePolicy().hasHeightForWidth())
@@ -138,6 +138,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.btn_skip = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_skip.setObjectName(u"btn_skip")
+        font3 = QFont()
+        font3.setPointSize(10)
+        font3.setBold(True)
+        self.btn_skip.setFont(font3)
+
+        self.verticalLayout_2.addWidget(self.btn_skip)
+
         self.btn_ones = QPushButton(self.verticalLayoutWidget_2)
         self.btn_ones.setObjectName(u"btn_ones")
         sizePolicy.setHeightForWidth(self.btn_ones.sizePolicy().hasHeightForWidth())
@@ -189,10 +198,10 @@ class Ui_MainWindow(object):
         self.btn_exit = QPushButton(self.centralwidget)
         self.btn_exit.setObjectName(u"btn_exit")
         self.btn_exit.setGeometry(QRect(10, 810, 51, 31))
-        font3 = QFont()
-        font3.setFamilies([u"C059"])
-        font3.setBold(True)
-        self.btn_exit.setFont(font3)
+        font4 = QFont()
+        font4.setFamilies([u"C059"])
+        font4.setBold(True)
+        self.btn_exit.setFont(font4)
         self.btn_d1 = QPushButton(self.centralwidget)
         self.btn_d1.setObjectName(u"btn_d1")
         self.btn_d1.setGeometry(QRect(170, 10, 121, 111))
@@ -212,49 +221,49 @@ class Ui_MainWindow(object):
         self.lbl_turn = QLabel(self.centralwidget)
         self.lbl_turn.setObjectName(u"lbl_turn")
         self.lbl_turn.setGeometry(QRect(150, 740, 151, 51))
-        font4 = QFont()
-        font4.setFamilies([u"C059"])
-        font4.setPointSize(16)
-        self.lbl_turn.setFont(font4)
+        font5 = QFont()
+        font5.setFamilies([u"C059"])
+        font5.setPointSize(16)
+        self.lbl_turn.setFont(font5)
         self.verticalLayoutWidget_3 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_3.setObjectName(u"verticalLayoutWidget_3")
-        self.verticalLayoutWidget_3.setGeometry(QRect(830, -5, 111, 451))
+        self.verticalLayoutWidget_3.setGeometry(QRect(830, 30, 111, 411))
         self.verticalLayout_3 = QVBoxLayout(self.verticalLayoutWidget_3)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.lbl_ones = QLabel(self.verticalLayoutWidget_3)
         self.lbl_ones.setObjectName(u"lbl_ones")
-        self.lbl_ones.setFont(font4)
+        self.lbl_ones.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_ones)
 
         self.lbl_twos = QLabel(self.verticalLayoutWidget_3)
         self.lbl_twos.setObjectName(u"lbl_twos")
-        self.lbl_twos.setFont(font4)
+        self.lbl_twos.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_twos)
 
         self.lbl_threes = QLabel(self.verticalLayoutWidget_3)
         self.lbl_threes.setObjectName(u"lbl_threes")
-        self.lbl_threes.setFont(font4)
+        self.lbl_threes.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_threes)
 
         self.lbl_fours = QLabel(self.verticalLayoutWidget_3)
         self.lbl_fours.setObjectName(u"lbl_fours")
-        self.lbl_fours.setFont(font4)
+        self.lbl_fours.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_fours)
 
         self.lbl_fives = QLabel(self.verticalLayoutWidget_3)
         self.lbl_fives.setObjectName(u"lbl_fives")
-        self.lbl_fives.setFont(font4)
+        self.lbl_fives.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_fives)
 
         self.lbl_sixes = QLabel(self.verticalLayoutWidget_3)
         self.lbl_sixes.setObjectName(u"lbl_sixes")
-        self.lbl_sixes.setFont(font4)
+        self.lbl_sixes.setFont(font5)
 
         self.verticalLayout_3.addWidget(self.lbl_sixes)
 
@@ -266,46 +275,53 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.lbl_3same = QLabel(self.verticalLayoutWidget_4)
         self.lbl_3same.setObjectName(u"lbl_3same")
-        self.lbl_3same.setFont(font4)
+        self.lbl_3same.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_3same)
 
         self.lbl_4same = QLabel(self.verticalLayoutWidget_4)
         self.lbl_4same.setObjectName(u"lbl_4same")
-        self.lbl_4same.setFont(font4)
+        self.lbl_4same.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_4same)
 
         self.lbl_fullhouse = QLabel(self.verticalLayoutWidget_4)
         self.lbl_fullhouse.setObjectName(u"lbl_fullhouse")
-        self.lbl_fullhouse.setFont(font4)
+        self.lbl_fullhouse.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_fullhouse)
 
         self.lbl_smstr = QLabel(self.verticalLayoutWidget_4)
         self.lbl_smstr.setObjectName(u"lbl_smstr")
-        self.lbl_smstr.setFont(font4)
+        self.lbl_smstr.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_smstr)
 
         self.lbl_lgstr = QLabel(self.verticalLayoutWidget_4)
         self.lbl_lgstr.setObjectName(u"lbl_lgstr")
-        self.lbl_lgstr.setFont(font4)
+        self.lbl_lgstr.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_lgstr)
 
         self.lbl_yhatzee = QLabel(self.verticalLayoutWidget_4)
         self.lbl_yhatzee.setObjectName(u"lbl_yhatzee")
-        self.lbl_yhatzee.setFont(font4)
+        self.lbl_yhatzee.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_yhatzee)
 
         self.lbl_chance = QLabel(self.verticalLayoutWidget_4)
         self.lbl_chance.setObjectName(u"lbl_chance")
-        self.lbl_chance.setFont(font4)
+        self.lbl_chance.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.lbl_chance)
 
+        self.btn_back = QPushButton(self.centralwidget)
+        self.btn_back.setObjectName(u"btn_back")
+        self.btn_back.setGeometry(QRect(60, 810, 51, 31))
+        font6 = QFont()
+        font6.setPointSize(9)
+        font6.setBold(True)
+        self.btn_back.setFont(font6)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -330,6 +346,8 @@ class Ui_MainWindow(object):
         self.btn_d3.clicked.connect(MainWindow.dice_click_a)
         self.btn_d4.clicked.connect(MainWindow.dice_click_a)
         self.btn_d5.clicked.connect(MainWindow.dice_click_a)
+        self.btn_skip.clicked.connect(MainWindow.btn_skip_a)
+        self.btn_back.clicked.connect(MainWindow.btn_back_a)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -349,6 +367,7 @@ class Ui_MainWindow(object):
         self.btn_lgstr.setText(QCoreApplication.translate("MainWindow", u"Lg Straight", None))
         self.btn_yhatzee.setText(QCoreApplication.translate("MainWindow", u"Yhatzee", None))
         self.btn_chance.setText(QCoreApplication.translate("MainWindow", u"Chance", None))
+        self.btn_skip.setText(QCoreApplication.translate("MainWindow", u"Skip Turn", None))
         self.btn_ones.setText(QCoreApplication.translate("MainWindow", u"Ones", None))
         self.btn_twos.setText(QCoreApplication.translate("MainWindow", u"Twos", None))
         self.btn_threes.setText(QCoreApplication.translate("MainWindow", u"Threes", None))
@@ -374,5 +393,6 @@ class Ui_MainWindow(object):
         self.lbl_lgstr.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.lbl_yhatzee.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.lbl_chance.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.btn_back.setText(QCoreApplication.translate("MainWindow", u"Back", None))
     # retranslateUi
 
