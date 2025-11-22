@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_1.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,9 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPushButton,
-    QSizePolicy, QWidget)
+    QSizePolicy, QTextBrowser, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -50,16 +49,15 @@ class Ui_MainWindow(object):
         font1 = QFont()
         font1.setPointSize(18)
         self.btn_view.setFont(font1)
-        self.webEngineView = QWebEngineView(self.centralwidget)
-        self.webEngineView.setObjectName(u"webEngineView")
-        self.webEngineView.setGeometry(QRect(120, 70, 801, 461))
-        self.webEngineView.setUrl(QUrl(u"about:blank"))
         self.btn_back = QPushButton(self.centralwidget)
         self.btn_back.setObjectName(u"btn_back")
         self.btn_back.setGeometry(QRect(20, 10, 81, 31))
         font2 = QFont()
         font2.setPointSize(13)
         self.btn_back.setFont(font2)
+        self.txt_instructions = QTextBrowser(self.centralwidget)
+        self.txt_instructions.setObjectName(u"txt_instructions")
+        self.txt_instructions.setGeometry(QRect(70, 150, 951, 331))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -79,5 +77,14 @@ class Ui_MainWindow(object):
         self.btn_play.setText(QCoreApplication.translate("MainWindow", u"Play", None))
         self.btn_view.setText(QCoreApplication.translate("MainWindow", u"View Instructions", None))
         self.btn_back.setText(QCoreApplication.translate("MainWindow", u"Back", None))
+        self.txt_instructions.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt;\">Yahtzee is a game centered around making scoring combinations with 5 dice. Each turn, after your initial roll, you can choose to re-roll any number of your dice up to a maximum of two times. After you are done rolling, select &quot;Done&quot; and then choose the scoring value you would like to take, if possible. If you are confused about a scoring combination, click "
+                        "the &quot;?&quot; button then the scoring combination you are confused about and an explanation popup will appear. Have fun!</span></p></body></html>", None))
     # retranslateUi
 

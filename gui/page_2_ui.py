@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_2.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.btn_3same = QPushButton(self.verticalLayoutWidget)
         self.btn_3same.setObjectName(u"btn_3same")
-        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_3same.sizePolicy().hasHeightForWidth())
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
         self.verticalLayoutWidget_2.setGeometry(QRect(490, 0, 291, 441))
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.verticalLayoutWidget_2.sizePolicy().hasHeightForWidth())
@@ -322,6 +322,10 @@ class Ui_MainWindow(object):
         font6.setPointSize(9)
         font6.setBold(True)
         self.btn_back.setFont(font6)
+        self.btn_qmark = QPushButton(self.centralwidget)
+        self.btn_qmark.setObjectName(u"btn_qmark")
+        self.btn_qmark.setGeometry(QRect(10, 10, 31, 31))
+        self.btn_qmark.setFont(font4)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -348,6 +352,7 @@ class Ui_MainWindow(object):
         self.btn_d5.clicked.connect(MainWindow.dice_click_a)
         self.btn_skip.clicked.connect(MainWindow.btn_skip_a)
         self.btn_back.clicked.connect(MainWindow.btn_back_a)
+        self.btn_qmark.clicked.connect(MainWindow.btn_qmark_a)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -394,5 +399,6 @@ class Ui_MainWindow(object):
         self.lbl_yhatzee.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.lbl_chance.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.btn_back.setText(QCoreApplication.translate("MainWindow", u"Back", None))
+        self.btn_qmark.setText(QCoreApplication.translate("MainWindow", u"?", None))
     # retranslateUi
 

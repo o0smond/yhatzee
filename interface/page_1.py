@@ -1,4 +1,3 @@
-
 # By: Oliver Osmond
 # Date: 2025-01-19
 # Program Details: Yhatzee
@@ -20,7 +19,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.setupUi(self)
             self.main_screen = [self.btn_play, self.btn_view, self.lbl_logo]
             self.btn_back.setVisible(False)
-            self.webEngineView.setVisible(False)
+            self.txt_instructions.setVisible(False)
         
     def btn_exit_a(self):
         exit()
@@ -30,15 +29,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         manager.widget.resize(945, 847)
         
     def btn_view_a(self):
-        self.webEngineView.setUrl("https://www.youtube.com/watch_popup?v=AHDgpuEzopc")
         self.onoff(False, True)
     
     def btn_back_a(self):
-        self.webEngineView.setUrl("about:blank")
         self.onoff(True, False)
     
     def onoff(self, one, two):
         for i in range(3):
             self.main_screen[i].setVisible(one)
         self.btn_back.setVisible(two)
-        self.webEngineView.setVisible(two)
+        self.txt_instructions.setVisible(two)

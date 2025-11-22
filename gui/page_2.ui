@@ -758,6 +758,25 @@
      <string>Back</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_qmark">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>C059</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>?</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
@@ -1130,6 +1149,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_qmark</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_qmark_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1161</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btn_exit_a()</slot>
@@ -1151,5 +1186,7 @@
   <slot>dice_click_a()</slot>
   <slot>btn_skip_a()</slot>
   <slot>btn_back_a()</slot>
+  <slot>btn_qmark_a()</slot>
+  <slot>btn_reset_a()</slot>
  </slots>
 </ui>
