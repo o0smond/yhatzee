@@ -23,7 +23,7 @@ Please see the program's "View Instructions" page for details on rules.
 
 ### Installation
 
-**Step 1:** Please clone from `https://github.com/meeses-o/yhatzee_gui.git`
+**Step 1:** Please clone from `https://github.com/meeses777/yhatzee_gui.git`
 
 **Step 2:** Create and activate a working virtual environment (venv):
 
